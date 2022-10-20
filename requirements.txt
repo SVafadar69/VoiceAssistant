@@ -1,0 +1,5 @@
+pandas =
+matplotlib
+pandas_datareader
+statsmodel
+translate
