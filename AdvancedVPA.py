@@ -2,8 +2,11 @@ import wolframalpha
 import wikipedia
 import time
 
-from mysr import voice_to_text
-from mysay import print_say
+
+
+
+from constants import voice_to_text
+from constants import print_say
 API_KEY = "595KVV-JY64RGJKEG"
 wolf = wolframalpha.Client("595KVV-JY64RGJKEG")
 def ask_wolf():

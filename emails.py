@@ -1,5 +1,5 @@
-from mysay import print_say
-from mysr import voice_to_text
+from constants import print_say
+from constants import voice_to_text
 import ssl
 import smtplib
 from email.message import EmailMessage

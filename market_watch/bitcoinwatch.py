@@ -3,7 +3,7 @@ import requests
 
 import arrow
 
-from mysay import print_say
+from constants import print_say
 from constants import headers #import var from constants file
 # Specify the url to find the bitcoin price
 url = 'https://api.coindesk.com/v1/bpi/currentprice.json'

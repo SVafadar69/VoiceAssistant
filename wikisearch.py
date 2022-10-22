@@ -1,6 +1,6 @@
 import wikipedia
-from mysr import voice_to_text
-from mysay import print_say
+from constants import voice_to_text
+from constants  import print_say
 # inp = voice_to_text()
 # my_query = inp("What do you want to know \n").lower()
 def wiki_search():

@@ -1,5 +1,5 @@
-from mysr import voice_to_text
-from mysay import print_say
+from constants import voice_to_text
+from constants import print_say
 import speech_recognition as sr
 speech = sr.Recognizer()
 import time
@@ -8,14 +8,7 @@ import pyttsx3
 
 engine = pyttsx3.init()
 
-def settings():
-    voices = engine.getProperty('voices')
 
-    engine.setProperty('voice', voices[1].id) #0= male, 1 = female. indexing list
-    engine.setProperty('rate', 150)
-    engine.setProperty('volume', 0.8)
-
-settings()
 
 # while True:
 

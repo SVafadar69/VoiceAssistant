@@ -2,8 +2,8 @@ import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
-from mysr import voice_to_text
-from mysay import print_say
+from constants import voice_to_text
+from constants import print_say
 
 
 

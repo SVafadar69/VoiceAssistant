@@ -1,8 +1,8 @@
 from chapterSeven import *
-import random
-import json
-from mysr import voice_to_text
-from mysay import print_say
+
+from constants import print_say
+from constants import voice_to_text
+from constants import json
 from MyWakeup import wakeup
 from jokes import joke
 from AdvancedVPA import ask_wolf
@@ -10,7 +10,7 @@ from emails import send_email
 from news_hs import speak_news
 from onlineradio import live_radio
 from openingFiles import open_file
-from talkback import settings
+from constants import switch_voices
 #from traverse import function
 from Turtle import screen_setup
 from VoiceSearch import search_web
@@ -18,7 +18,6 @@ from wikisearch import wiki_search
 from market_watch import bitcoinwatch, stock_watch #import func directly from folder. NO need to call file
 #from finance import get_stock_info, alpha_beta
 #from mrworldwide import mr_worldwide_mmm
-settings()
 
 # Open chats.json and put it in a dictionary
 with open('chats.json','r') as content:

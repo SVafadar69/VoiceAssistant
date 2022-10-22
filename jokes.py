@@ -1,5 +1,5 @@
 import random
-from mysay import print_say
+from constants import print_say
 import time
 
 def joke():

@@ -3,7 +3,7 @@ import tkinter as tk
 import arrow
 from yahoo_fin import stock_info as si
 
-from mysay import print_say
+from constants import print_say
 
 # Create a root window hold all widgets
 root = tk.Tk()

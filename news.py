@@ -1,15 +1,4 @@
-import requests
-import bs4
 
-res = requests.get('https://www.npr.org/sections/news/')
-res.raise_for_status()
-
-soup = bs4.BeautifulSoup(res.text, 'html.parser')
-
-div_tags = soup.find_all('div', class_='item-info')
-print(div_tags[1])
-
-news_index = 1
 
 for div_tag in div_tags:
     print(f"News Article # {news_index}")
