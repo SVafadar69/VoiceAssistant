@@ -10,8 +10,8 @@ def email_setup():
 
     email_message, email_subject, email_recipient, destination_email = send_email()
 
-    email = "svafadar19@gmail.com"
-    password = "Svafadar20?"
+    email = "Enter your own email"
+    password = "Enter your own password"
     body = email_message
     em = EmailMessage()
     em['From'] = email
