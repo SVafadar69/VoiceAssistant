@@ -2,6 +2,7 @@ import random
 import json
 import time
 import wolframalpha
+import wikipedia
 from tkinter import messagebox
 import pyttsx3
 import speech_recognition as sr
@@ -35,8 +36,7 @@ def switch_voices():
     engine.setProperty('volume', 0.8)
 
 
-##Voice Assistant Talks back to you
-
+#Using voice as inputs
 def voice_to_text():
     #print_say("Say something") #func can be called from another func that is later defined
     voice_input = ""
@@ -49,7 +49,7 @@ def voice_to_text():
             pass
     return voice_input
 
-
+#Computer speaking
 def print_say(txt):
     try:
         engine = pyttsx3.init()
@@ -62,6 +62,7 @@ def print_say(txt):
 
 inp = voice_to_text()  # if placing a later defined func inside of voice_text, inp must be called later\
 
+#Keep variables and functions
 if __name__ == "__main__":
     print_say()
     inp

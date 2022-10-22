@@ -1,30 +1,14 @@
 # from main import *
 import webbrowser
 import speech_recognition as sr
+from constants import voice_to_text, print_say
 
 # website = webbrowser.open("http://"+"wsj.com") #open websites
 
-def voice_search():
-    speech = sr.Recognizer()
-
-    voice_input = ""
-
-    with sr.Microphone() as source:
-
-        speech.adjust_for_ambient_noise(source)
-        try:
-            audio = speech.listen(source)
-            voice_input = speech.recognize_google(audio) #voice input becomes spoken word
-
-        except (sr.WaitTimeoutError, sr.UnknownValueError, sr.RequestError):
-            pass
-    return voice_input
-
 def search_web():
     while True:
-        print("Python is listening")
-
-        inp = voice_search()
+        print_say("What do you want me to search?")
+        inp = voice_to_text()
         print(f"You just said {inp}")
 
         if inp == "Stop listening":
