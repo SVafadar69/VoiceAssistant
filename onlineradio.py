@@ -6,8 +6,6 @@ from constants import voice_to_text
 from constants import print_say
 
 
-
-
 def live_radio():
 
     chrome_options = Options()
@@ -22,21 +20,26 @@ def live_radio():
     button.click()
 
 # Start the loop
-while True:
-    print_say("How may I help you?")
-    inp = voice_to_text().lower()
-    print_say(f'You just said {inp}.')
-    if inp == "stop listening":
-        print_say('Goodbye!')
-        break
-    elif "radio" in inp:
-        print_say('OK, play live radio online for you!')
-        live_radio()
-        # Say stop playing to stop the radio any time
-        while True:
-            background = voice_to_text().lower()
-            if "stop playing" in background:
-                button.click() #pauses the radio
-                break
-            else:
-                continue
+
+def play_radio():
+    while True:
+        print_say("How may I help you?")
+        inp = voice_to_text().lower()
+        print_say(f'You just said {inp}.')
+        if inp == "stop listening":
+            print_say('Goodbye!')
+            break
+        elif "radio" in inp:
+            print_say('OK, play live radio online for you!')
+            live_radio()
+            # Say stop playing to stop the radio any time
+            while True:
+                background = voice_to_text().lower()
+                if "stop playing" in background:
+                    button.click() #pauses the radio
+                    break
+                else:
+                    continue
+
+if __name__ == "__main__":
+    play_radio()

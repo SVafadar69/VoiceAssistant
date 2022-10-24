@@ -4,7 +4,6 @@ from constants import voice_to_text
 import requests
 import bs4
 
-
 def speak_news():
     print_say("Here's an overview of what's going on today")
     res = requests.get('https://www.npr.org/sections/news/')
@@ -46,4 +45,5 @@ def play_news():
         time.sleep(2)
         speak_news()
 
-play_news()
+if __name__ == "__main__":
+    play_news()

@@ -1,5 +1,5 @@
 import requests
-from mysay import print_say
+from constants import print_say
 
 url = "https://api.coindesk.com/v1/bpi/currentprice.json"
 headers = {

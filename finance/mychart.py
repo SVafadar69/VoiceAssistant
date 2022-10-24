@@ -4,7 +4,7 @@ import matplotlib.dates as mdates
 from mplfinance.original_flavor import candlestick_ohlc
 import requests
 from myplot import headers
-from mysay import print_say
+from constants import print_say
 
 from datetime import date, timedelta
 

@@ -4,7 +4,7 @@ from constants import print_say
 from constants import voice_to_text
 from constants import json
 from MyWakeup import wakeup
-from jokes import joke
+# from jokes import joke
 from AdvancedVPA import ask_wolf
 from emails import send_email
 from news_hs import speak_news
@@ -43,9 +43,9 @@ while True:
         #     alarm(inp)
         #     continue
         # # Activate the joke-telling functionality
-        elif "joke" in inp:
-            joke()
-            continue
+        # elif "joke" in inp:
+        #     joke()
+        #     continue
         elif len(inp) > 10: #to ensure if nothing is said (empty string) voice assistant doesn't call other methods
             ask_wolf()
         elif "email" in inp:

@@ -59,7 +59,8 @@ def send_email():
 
             email, password, destination_email = email_setup()
 
-send_email()
+if __name__ == "__main__":
+    send_email()
 # import smtplib
 #
 # # Build a dictionary of names and emails

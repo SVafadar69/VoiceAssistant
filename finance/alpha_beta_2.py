@@ -4,8 +4,8 @@ import statsmodels.api as sm
 from pandas_datareader import data as pdr
 import requests
 
-from mysay import print_say
-from mysr import voice_to_text
+from constants import print_say
+from constants import voice_to_text
 global ticker
 headers =  {
     "User-Agent": "Chrome/84.0.4147.125 Safari/537.36",
@@ -68,7 +68,7 @@ while True:
     elif "stock report for" in inp:
         # Locate the company name
         pos = inp.find('stock report for ')
-        firm = inp[pos + len('stock report for '):]
+        firm = inp[pos + len('stock report for '):] #indexing the remainder of the string by using the
         alpha_beta(firm)
         continue
     # Otherwise, go to the next iteration
