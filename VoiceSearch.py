@@ -20,3 +20,6 @@ def search_web():
             #webbrowser.open("http://"+inp) #concatenate strings so spoken word gets added to URl. browser google = URL + google
             webbrowser.open("http://google.com/search?q="+inp) #-> URL for google queries
             continue
+
+if __name__ == "__main__":
+    search_web()

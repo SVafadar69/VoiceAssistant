@@ -1,10 +1,12 @@
-from constants import inp
+from constants import voice_to_text
 
 def wakeup():
     print("waiting to be ")
+    #inp = voice_to_text()
+    inp = "rise"
     wakeup = "StandBy"
 
-    if "rise and shine" in inp: #get list of possible wakeup commands
+    if "rise" in inp: #get list of possible wakeup commands
         wakeup = "Activated"
 
     elif "stop" in inp:

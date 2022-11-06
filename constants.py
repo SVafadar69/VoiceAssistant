@@ -68,3 +68,7 @@ if __name__ == "__main__":
     inp
     voice_to_text()
     switch_voices()
+    API_KEY
+    wolf
+    url
+    headers

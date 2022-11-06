@@ -1,13 +1,12 @@
 import wolframalpha
-import wikipedia
 import time
 
+from constants import wikipedia
 from constants import voice_to_text
 from constants import print_say
 from constants import wolf, API_KEY
 
-API_KEY = "595KVV-JY64RGJKEG"
-wolf = wolframalpha.Client("595KVV-JY64RGJKEG")
+
 def ask_wolf():
     while True:
         print_say("What do you want to look up?")
@@ -50,5 +49,6 @@ def repeat_exception(e):
     print_say(repr(e))
 
 if __name__ == "__main__":
-    repeat_exception(e)
     ask_wolf()
+    # repeat_exception(e=e)
+

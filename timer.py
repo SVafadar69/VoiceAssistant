@@ -1,6 +1,6 @@
 import time
 import arrow
-from mysay import print_say
+from constants import print_say
 
 inp = input("How long do you want to set a timer for?")
 
