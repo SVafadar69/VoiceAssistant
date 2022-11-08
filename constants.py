@@ -2,6 +2,7 @@ import random
 import json
 import time
 import wolframalpha
+import openai
 import wikipedia
 from tkinter import messagebox
 import pyttsx3
@@ -15,7 +16,6 @@ import os
 import json
 
 ##Setting up news scraping
-
 
 ##Setting up Wolfram Alpha Data
 API_KEY = "595KVV-JY64RGJKEG"
@@ -39,6 +39,7 @@ def switch_voices():
 #Using voice as inputs
 def voice_to_text():
     #print_say("Say something") #func can be called from another func that is later defined
+    print("Listening to your input")
     voice_input = ""
     with sr.Microphone() as source:
         speech.adjust_for_ambient_noise(source)

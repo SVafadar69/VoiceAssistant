@@ -5,7 +5,7 @@ from constants import wikipedia
 from constants import voice_to_text
 from constants import print_say
 from constants import wolf, API_KEY
-
+import webbrowser
 
 def ask_wolf():
     while True:
@@ -25,6 +25,7 @@ def ask_wolf():
             res = next(response.results).text #retrieve text result of Query
             print_say(res) #read out loud text
 
+        #Using wikipedia if Wolfram Alpha Fails
         except Exception as e:
             try:
                 print_say("This is taken from Wikipedia")
@@ -38,6 +39,13 @@ def ask_wolf():
                     print_say(answer[:200])
                 except Exception as e:
                     repeat_exception(e)
+                try:
+                    print_say("I couldn't find your request online. Opening google for you.")
+                    webbrowser.open("http://google.com/search?q=" + inp)  # -> URL for google queries
+                except Exception as e:
+                    repeat_exception(e)
+                pass
+
         #else: #will execute if no exception
 
         #finally: #will execute no matter what
