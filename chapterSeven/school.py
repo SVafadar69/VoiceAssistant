@@ -9,7 +9,7 @@
 import openai
 from constants import voice_to_text, print_say
 
-openai.api_key = "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"
+openai.api_key = "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"
 #inp = voice_to_text()
 name = "Steven"
 
@@ -26,7 +26,7 @@ def conversation():
         print("user input", inp)
 
         response = openai.Completion.create(engine='text-davinci-001', prompt=inp, max_tokens=50)  # prompt gets created into dict.
-        bot_response = response["choices"][0]["text"].replace('\n', '') #retrieve the response with text index.
+        bot_response = response["choices"][0]["text"].replace('"', '') #retrieve the response with text index.replacing string quotes
         print("bot response", bot_response)
         print(type(bot_response))
         print_say(bot_response)
