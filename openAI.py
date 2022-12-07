@@ -11,7 +11,8 @@ import os
 from constants import voice_to_text, print_say
 from imageDally import dalle
 
-openai.api_key = "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"
+api_key = "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"
+openai.api_key = api_key
 name = "Steven"
 
 def conversation():
@@ -25,8 +26,8 @@ def conversation():
             print_say("Okay, exiting the program")
             return True
 
-        elif "dalle" in inp:
-            dalle():
+        # elif "dalle" in inp:
+        #     dalle():
 
         print("user input", inp)
 
@@ -53,5 +54,4 @@ def conversation():
 
 if __name__ == "__main__":
     conversation()
-    dalle()
     openai.api_key
