@@ -3,11 +3,13 @@ from chapterSeven import *
 from constants import print_say
 from constants import voice_to_text
 from constants import json
+from constants import switch_voices
 from MyWakeup import wakeup
 # from jokes import joke
 from AdvancedVPA import ask_wolf #will also call repeat_exception
 #from emails import send_email
 from news_hs import speak_news
+from openAI import conversation
 from onlineradio import live_radio
 #from openingFiles import open_file
 from constants import switch_voices
@@ -30,7 +32,7 @@ while True:
     while wake_up == "Activated":
         print_say("How may I help you?")
         #inp = voice_to_text().lower()
-        inp = input("Enter something")
+        inp = str(input("Enter something"))
         print_say(f'You just said {inp}.')
         if "back" in inp and "stand" in inp:
             print_say('OK, back to standby; let me know if you need help!')
@@ -47,11 +49,16 @@ while True:
         # elif "joke" in inp:
         #     joke()
         #     continue
+        elif "conversation" in inp:
+            print_say("Activating conversation mode")
+            conversation()
         elif len(inp) > 10: #to ensure if nothing is said (empty string) voice assistant doesn't call other methods
+            print_say("Using Wolfram Alpha")
             ask_wolf()
         # elif "email" in inp:
         #     send_email()
         elif "news" in inp:
+            print_say("Switching to news")
             speak_news()
         elif "live radio" in inp:
             live_radio()
@@ -63,6 +70,8 @@ while True:
             search_web()
         elif "wikipedia" in inp: #don't call funcs within files to not have them run on import
             wiki_search()
+        elif "switch voices" in inp:
+            switch_voices()
         # elif "bitcoin watch" in inp:
         #     bitcoinwatch()
         # elif "stock watch" in inp:

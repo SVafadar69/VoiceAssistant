@@ -31,7 +31,7 @@ def switch_voices():
     x = [1, 2]
     engine = pyttsx3
     voices = engine.getProperty('voices')
-    engine.setProperty('voice', voices[1].id) #0= male, 1 = female. indexing list
+    engine.setProperty('voice', voices[0].id) #0= male, 1 = female. indexing list
     engine.setProperty('rate', 150)
     engine.setProperty('volume', 0.8)
 
@@ -61,12 +61,12 @@ def print_say(txt):
     engine.say(txt)
     engine.runAndWait()
 
-inp = voice_to_text()  # if placing a later defined func inside of voice_text, inp must be called later\
+#inp = voice_to_text()  # if placing a later defined func inside of voice_text, inp must be called later\
 
 #Keep variables and functions
 if __name__ == "__main__":
     print_say()
-    inp
+    #inp
     voice_to_text()
     switch_voices()
     API_KEY

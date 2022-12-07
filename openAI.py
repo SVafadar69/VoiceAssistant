@@ -7,32 +7,44 @@
 # webbrowser.open("http://google.com/search?q=" + inp)  # -> URL for google queries
 
 import openai
+import os
 from constants import voice_to_text, print_say
+from imageDally import dalle
 
-openai.api_key = "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"
-#inp = voice_to_text()
+openai.api_key = "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"
 name = "Steven"
 
 def conversation():
-
+    #print_say("What do you want to talk about")
     while True:
+        #inp = voice_to_text()
 
-        inp = str(input())
+        inp = str(input("Waiting for your input"))
 
         if "stop" in inp:
             print_say("Okay, exiting the program")
-            return False
+            return True
+
+        elif "dalle" in inp:
+            dalle():
 
         print("user input", inp)
 
         response = openai.Completion.create(engine='text-davinci-001', prompt=inp, max_tokens=50)  # prompt gets created into dict.
-        bot_response = response["choices"][0]["text"].replace('"', '') #retrieve the response with text index.replacing string quotes
-        print("bot response", bot_response)
-        print(type(bot_response))
+        bot_response = response["choices"][0]["text"].split('. ')
+        bot_response = [bot_response.split('\n')[-1] for bot_response in bot_response[:2]] #slicing list to 2, taking the 2nd
+        #index of bot response split that does not contain bad characters
+
+
         print_say(bot_response)
 
+        # print("bot response", bot_response)
+        # print(type(bot_response))
+
+
+
+
 #conversation(user_response=voice_to_text())
-conversation()
 
 # bot_response = response["choices"][0]["text"].replace('\n', "")
 # response_split = bot_response.split(name + ": ", 1)[0].split("Bot: ", 1)[
@@ -41,3 +53,5 @@ conversation()
 
 if __name__ == "__main__":
     conversation()
+    dalle()
+    openai.api_key

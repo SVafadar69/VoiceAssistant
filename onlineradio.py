@@ -30,7 +30,7 @@ def play_radio():
             print_say('Goodbye!')
             break
         elif "radio" in inp:
-            print_say('OK, play live radio online for you!')
+            print_say('OK, playing live radio for you!')
             live_radio()
             # Say stop playing to stop the radio any time
             while True:
