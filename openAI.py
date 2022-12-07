@@ -7,7 +7,7 @@
 # webbrowser.open("http://google.com/search?q=" + inp)  # -> URL for google queries
 
 '''
-Author: Steven Vafadar, Ken Tao Zheng
+Author: Steven Vafadar (301171884), Ken Tao Zheng (301070670)
 Last Modified: Steven Vafadar
 Date: Dec 6th 2022
 '''
@@ -27,6 +27,8 @@ from imageDally import dalle, chatGPT
 
 openai.api_key = api_key
 name = "Steven"
+
+#Initating all functions of OpenAI - Dalle, ChatGPT, GPT3
 
 def conversation():
     #print_say("What do you want to talk about")

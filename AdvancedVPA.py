@@ -1,5 +1,5 @@
 '''
-Author: Steven Vafadar,
+Author: Steven Vafadar (301171884), Ken Tao Zheng (301070670)
 Last Modified: Ken Tao Zheng
 Date: Dec 6th 2022
 '''
@@ -18,6 +18,8 @@ This file is used to access the Wolfram Alpha Scientific Search Engine. It is pr
 of typical GPT-3 queries. It leverages Wolfram Alpha, which is the greatest scientific search engine in the world, to make the scientific
 query process more efficient. 
 '''
+
+#Activating the wolfram alpha search engine
 
 def ask_wolf():
     while True:

@@ -1,5 +1,5 @@
 '''
-Author: Steven Vafadar, Ken Tao Zheng
+Author: Steven Vafadar (301171884), Ken Tao Zheng (301070670)
 Last Modified: Steven Vafadar
 Date: Dec 6th 2022
 '''
@@ -25,6 +25,8 @@ openai.api_key = api_key
 
 driver = webdriver.Chrome(executable_path=chromedriver)
 driver.minimize_window()
+
+#Activating dalle from OpenAI
 
 def dalle():
 

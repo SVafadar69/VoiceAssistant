@@ -1,5 +1,5 @@
 '''
-Author: Steven Vafadar, Ken Tao Zheng
+Author: Steven Vafadar (301171884), Ken Tao Zheng (301070670)
 Last Modified: Ken Tao Zheng
 Date: Dec 6th 2022
 '''
@@ -40,6 +40,8 @@ headers = {
     "User-Agent": "Chrome/84.0.4147.125 Safari/537.36",
     "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8" }
 
+#Change the voices of the voice recognition device
+
 def switch_voices():
 
     x = [1, 2]
@@ -77,7 +79,7 @@ def print_say(txt):
 
 #inp = voice_to_text()  # if placing a later defined func inside of voice_text, inp must be called later\
 
-#Keep variables and functions
+#Keep variables and functions - preventing the auto-run of functions after getting imported
 if __name__ == "__main__":
     print_say()
     #inp

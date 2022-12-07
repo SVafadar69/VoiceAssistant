@@ -21,7 +21,7 @@ from wikisearch import wiki_search
 #from mrworldwide import mr_worldwide_mmm
 
 '''
-Author: Steven Vafadar
+Author: Steven Vafadar (301171884), Ken Tao Zheng (301070670)
 Last Modified: Ken Tao Zheng
 Date: Dec 6th 2022
 '''
