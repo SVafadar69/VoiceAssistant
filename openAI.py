@@ -10,7 +10,7 @@ import openai
 import os
 from constants import voice_to_text, print_say
 from constants import api_key
-from imageDally import dalle
+from imageDally import dalle, chatGPT
 
 
 openai.api_key = api_key
@@ -21,7 +21,7 @@ def conversation():
     while True:
         #inp = voice_to_text()
 
-        inp = str(input("Waiting for your input"))
+        inp = str(input("Waiting for your input")).lower()
 
         if "stop" in inp:
             print_say("Okay, exiting the program")
@@ -30,6 +30,8 @@ def conversation():
         elif "dalle" in inp:
             dalle()
 
+        elif "chatgpt" in inp:
+            chatGPT()
 
         else:
 

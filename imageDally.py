@@ -5,14 +5,16 @@ from constants import api_key
 from AdvancedVPA import repeat_exception
 from selenium import webdriver
 from selenium.webdriver.common import keys
+from selenium.webdriver.common.by import By
 import time
 
 chromedriver = r"C:\Users\User\Downloads\chromedriver.exe"
-openai.api_key = "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"
+openai.api_key = "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"
+
+driver = webdriver.Chrome(executable_path=chromedriver)
+driver.minimize_window()
 
 def dalle():
-    driver = webdriver.Chrome(executable_path=chromedriver)
-    driver.minimize_window()
 
     while True:
         #inp = voice_to_text()
@@ -50,7 +52,13 @@ def dalle():
             repeat_exception(e)
             pass
 
+def chatGPT():
+
+    print_say("Opening ChatGPT")
+    driver.get("https://beta.openai.com/playground")
+
 if __name__ == "__main__":
     dalle()
     #repeat_exception()
     openai.api_key
+    chatGPT()
