@@ -1,3 +1,15 @@
+'''
+Author: Steven Vafadar, Ken Tao Zheng
+Last Modified: Steven Vafadar
+Date: Dec 6th 2022
+'''
+
+'''
+This file is the entire file necessary for integrating the OpenAI Dall-E AI. Imports are being done from numerous other modules, 
+as their code is being used repeatedly throughout this file (and the remainder of the program). ChatGPT is also incorporated into this file, 
+however the only features currently present are just opening the playground page automatically. 
+'''
+
 import openai
 import os
 from constants import voice_to_text, print_say
@@ -9,7 +21,7 @@ from selenium.webdriver.common.by import By
 import time
 
 chromedriver = r"C:\Users\User\Downloads\chromedriver.exe"
-openai.api_key = "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"
+openai.api_key = api_key
 
 driver = webdriver.Chrome(executable_path=chromedriver)
 driver.minimize_window()

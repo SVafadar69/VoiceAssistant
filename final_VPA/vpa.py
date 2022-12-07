@@ -1,5 +1,4 @@
 from chapterSeven import *
-
 from constants import print_say
 from constants import voice_to_text
 from constants import json
@@ -20,6 +19,18 @@ from wikisearch import wiki_search
 #from market_watch import bitcoinwatch, stock_watch #import func directly from folder. NO need to call file
 #from finance import get_stock_info, alpha_beta
 #from mrworldwide import mr_worldwide_mmm
+
+'''
+Author: Steven Vafadar
+Last Modified: Ken Tao Zheng
+Date: Dec 6th 2022
+'''
+
+'''
+This is the general assistant file, where the key functions of the application are all consolidated here. Whether it is using OpenAI's 
+AIs, Wolfram Alpha's Search Engine, playing the news, or performing general google searches, all the functions of the applications
+are stored in this file. 
+'''
 
 # Open chats.json and put it in a dictionary
 with open('chats.json','r') as content:

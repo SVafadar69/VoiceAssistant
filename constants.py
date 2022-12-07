@@ -1,3 +1,14 @@
+'''
+Author: Steven Vafadar, Ken Tao Zheng
+Last Modified: Ken Tao Zheng
+Date: Dec 6th 2022
+'''
+
+'''
+This file is a constants file, to hold data that is used constantly throughout the entire program. That can include reused functions,
+api keys, module imports, and more. It is essentially used to minimize the reusing of non-essential code, and to keep the program
+more eligible. 
+'''
 import random
 import json
 import time
@@ -16,7 +27,7 @@ import os
 import json
 
 #OpenAI API Key
-api_key = "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"
+api_key = "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"
 
 ##Setting up news scraping
 

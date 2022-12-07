@@ -6,6 +6,18 @@
 # inp = inp.replace('')
 # webbrowser.open("http://google.com/search?q=" + inp)  # -> URL for google queries
 
+'''
+Author: Steven Vafadar, Ken Tao Zheng
+Last Modified: Steven Vafadar
+Date: Dec 6th 2022
+'''
+
+'''
+This is the general file for incorporating all of openAIs different AI modules. This includes ChatGPT, GPT3, and Dall-E. Future 
+iterations will include the incorporation of Codex (automated coding) that is functionable through voice input. This module is essentially
+created to leverage all of current openAI abilities, to make a programmer more efficient. 
+'''
+
 import openai
 import os
 from constants import voice_to_text, print_say
@@ -33,9 +45,9 @@ def conversation():
         elif "chatgpt" in inp:
             chatGPT()
 
-        else:
+        #GPT3 incorporation
 
-            #GPT3 incorporation
+        else:
 
             response = openai.Completion.create(engine='text-davinci-001', prompt=inp, max_tokens=50)  # prompt gets created into dict.
             bot_response = response["choices"][0]["text"].split('. ')

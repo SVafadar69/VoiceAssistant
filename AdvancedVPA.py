@@ -1,3 +1,9 @@
+'''
+Author: Steven Vafadar,
+Last Modified: Ken Tao Zheng
+Date: Dec 6th 2022
+'''
+
 import wolframalpha
 import time
 
@@ -6,6 +12,12 @@ from constants import voice_to_text
 from constants import print_say
 from constants import wolf, API_KEY
 import webbrowser
+
+'''
+This file is used to access the Wolfram Alpha Scientific Search Engine. It is primarily used for scientific queries outside the realm
+of typical GPT-3 queries. It leverages Wolfram Alpha, which is the greatest scientific search engine in the world, to make the scientific
+query process more efficient. 
+'''
 
 def ask_wolf():
     while True:
