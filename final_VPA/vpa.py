@@ -37,6 +37,7 @@ while True:
         if "back" in inp and "stand" in inp:
             print_say('OK, back to standby; let me know if you need help!')
             break #will break activated loop. originally infinite loop still running
+
         # # Activate the timer
         # elif "timer for" in inp and ("hour" in inp or "minute" in inp):
         #     timer(inp)

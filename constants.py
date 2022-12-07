@@ -15,6 +15,9 @@ import sys
 import os
 import json
 
+#OpenAI API Key
+api_key = "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"
+
 ##Setting up news scraping
 
 ##Setting up Wolfram Alpha Data
@@ -73,3 +76,4 @@ if __name__ == "__main__":
     wolf
     url
     headers
+    api_key
