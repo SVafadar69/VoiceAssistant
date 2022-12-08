@@ -43,7 +43,7 @@ while True:
     while wake_up == "Activated":
         print_say("How may I help you?")
         #inp = voice_to_text().lower()
-        inp = str(input("Enter something"))
+        inp = voice_to_text().lower()
         print_say(f'You just said {inp}.')
         if "back" in inp and "stand" in inp:
             print_say('OK, back to standby; let me know if you need help!')
@@ -61,10 +61,10 @@ while True:
         # elif "joke" in inp:
         #     joke()
         #     continue
-        elif "conversation" in inp:
-            print_say("Activating conversation mode")
+        elif "open" in inp:
+            print_say("Activating AI mode")
             conversation()
-        elif len(inp) > 10: #to ensure if nothing is said (empty string) voice assistant doesn't call other methods
+        elif "wolf" in inp: #to ensure if nothing is said (empty string) voice assistant doesn't call other methods
             print_say("Using Wolfram Alpha")
             ask_wolf()
         # elif "email" in inp:

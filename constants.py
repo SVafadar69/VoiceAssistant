@@ -27,7 +27,7 @@ import os
 import json
 
 #OpenAI API Key
-api_key = "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"
+api_key = "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"
 
 ##Setting up news scraping
 

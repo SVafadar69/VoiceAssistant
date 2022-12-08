@@ -48,12 +48,6 @@ def ask_wolf():
             except Exception as e:
                 repeat_exception(e)
                 try:
-                    print_say("This is taken from Google")
-                    answer = wikipedia.summary(inp)
-                    print_say(answer[:200])
-                except Exception as e:
-                    repeat_exception(e)
-                try:
                     print_say("I couldn't find your request online. Opening google for you.")
                     webbrowser.open("http://google.com/search?q=" + inp)  # -> URL for google queries
                 except Exception as e:

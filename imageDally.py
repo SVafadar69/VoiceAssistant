@@ -31,10 +31,10 @@ driver.minimize_window()
 def dalle():
 
     while True:
-        #inp = voice_to_text()
+
 
         print_say("What image would you like me to generate?")
-        inp = input("Enter something")
+        inp = voice_to_text()
 
         if "Stop Using Dalle".lower() in inp:
             print_say("Switching back to main mode")

@@ -8,11 +8,10 @@ from constants import voice_to_text, print_say
 def search_web():
     while True:
         print_say("What do you want me to search?")
-        #inp = voice_to_text()
-        inp = str(input("Listening..."))
+        inp = voice_to_text().lower()
         print(f"You just said {inp}")
 
-        if inp == "Stop listening":
+        if inp == "stop listening":
             print("Goodbye")
             break
 

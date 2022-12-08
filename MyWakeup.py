@@ -15,8 +15,7 @@ voice inputs in the backgruond, so it could be immediately summoned without need
 
 def wakeup():
     print("waiting to be activated")
-    #inp = voice_to_text()
-    inp = input("Enter something")
+    inp = voice_to_text()
     wakeup = "StandBy"
 
     if "rise" in inp: #get list of possible wakeup commands

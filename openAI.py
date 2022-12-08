@@ -32,9 +32,10 @@ name = "Steven"
 
 def conversation():
     while True:
-        #inp = voice_to_text()
 
-        inp = str(input("Waiting for your input")).lower()
+        print_say("How can I help you?")
+        inp = voice_to_text().lower()
+
 
         if "stop" in inp:
             print_say("Okay, exiting the program")
