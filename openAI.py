@@ -31,7 +31,6 @@ name = "Steven"
 #Initating all functions of OpenAI - Dalle, ChatGPT, GPT3
 
 def conversation():
-    #print_say("What do you want to talk about")
     while True:
         #inp = voice_to_text()
 
@@ -41,10 +40,10 @@ def conversation():
             print_say("Okay, exiting the program")
             return
 
-        elif "dalle" in inp:
+        elif "image generation" in inp:
             dalle()
 
-        elif "chatgpt" in inp:
+        elif "gpt" in inp:
             chatGPT()
 
         #GPT3 incorporation
